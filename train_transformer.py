@@ -28,13 +28,13 @@ encoded.set_format(type='tensorflow', columns=['input_ids', 'attention_mask', 'l
 # 4. Create tf.data.Dataset
 train_ds = encoded['train'].to_tf_dataset(
     columns=['input_ids', 'attention_mask'],
-    label_cols=['label'],
+    label_cols='label',  # Changed from ['label']
     shuffle=True,
     batch_size=BATCH_SIZE
 )
 test_ds = encoded['test'].to_tf_dataset(
     columns=['input_ids', 'attention_mask'],
-    label_cols=['label'],
+    label_cols='label',  # Changed from ['label']
     shuffle=False,
     batch_size=BATCH_SIZE
 )

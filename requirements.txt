@@ -1,3 +1,6 @@
+nltk
+transformers>=4.0.0
+datasets
 pandas
 scikit-learn
 nltk

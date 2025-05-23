@@ -68,6 +68,3 @@ def predict_sentiment(text: str) -> str:
     prob = model.predict(seq)[0][0]
     return 'Positive' if prob > 0.5 else 'Negative'
 
-if __name__ == '__main__':
-    sample = "This movie was absolutely wonderful, I loved every moment!"
-    print(f"Review: {sample}\nSentiment: {predict_sentiment(sample)}")
